@@ -1,38 +1,33 @@
 import React from "react";
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
-import { Doughnut } from "react-chartjs-2";
+import MyDoughnut from "./Doughnut";
 
-ChartJS.register(ArcElement, Tooltip, Legend);
+import "../css/chart.css";
 
-const data = {
-  labels: ["Blocked Traffic", "Total Traffic"],
-  datasets: [
-    {
-      title: "Threat Meter",
-      data: [50, 840],
-      backgroundColor: [
-        "rgb(50, 205, 50)", //lime
-        // "rgb(255,15,15)", //red
-        "rgb(128, 128, 128)", //gray
-      ],
-      // hoverOffset: 4,
-    },
-  ],
-};
+function MyChart() {
+  return (
+    <div className="page">
+      <span style={{ fontSize: "3em" }}>Threat Meter</span>
 
-function MyChart(props) {
-  const options = {
-    rotation: 225,
-    circumference: 275,
-    cutout: `75%`,
-    animation: {
-      duration: 4000,
-      animateRotate: true,
-      // animateScale: true,
-    },
-  };
+      <div className="box">
+        <MyDoughnut className="donut" />
 
-  return <Doughnut data={data} options={options} />;
+        <div className="textandpercent">
+          <span
+            className="donut-percent"
+            style={{
+              // color: "rgb(255,15,15)",
+              color: "rgb(50, 205, 50)",
+            }}
+          >
+            6%
+          </span>
+          <span className="donut-text">
+            of your traffic was blocked by Kavalan
+          </span>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default MyChart;

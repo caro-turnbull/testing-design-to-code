@@ -1,0 +1,43 @@
+.page {
+  width: 50%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  /* alignItems: center; */
+  text-align: center;
+  justify-items: center;
+}
+.box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.donut {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+.textandpercent {
+  position: absolute;
+  /* top: 30px;
+  left: 30px; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 100;
+}
+.donut-percent {
+  display: block;
+  font-size: 13em;
+  margin: 40px auto 0 auto;
+}
+.donut-text {
+  display: block;
+  font-size: 3em;
+  width: 70%;
+}
