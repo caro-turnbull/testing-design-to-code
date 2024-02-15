@@ -4,6 +4,7 @@ import MyDoughnut from "./Doughnut";
 import "../css/chart.css";
 
 function MyChart() {
+  //data would be passed here by session storage or state
   return (
     <div className="page">
       <span style={{ fontSize: "3em" }}>Threat Meter</span>
